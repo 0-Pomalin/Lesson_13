@@ -14,9 +14,14 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: rgb(126, 126, 126);
 }
 
 /* Header */
+
+.page-header__container {
+  background-color: transparent;
+}
 
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -28,20 +33,26 @@ body {
   z-index: 100;
 }
 
+.page-header__nav {
+  position: relative;
+  min-height: 60px;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.16;
   color: #2196f3;
+  transition: all 0.3s ease 0s;
 }
 
 .logo__web--black {
   color: #000;
 }
 
-.page-header__nav {
-  min-height: 60px;
+.logo:hover {
+  font-size: 30px;
 }
 
 .menu {
@@ -70,10 +81,27 @@ body {
   display: inline-block;
   padding: 5px 0px;
   transition: all 0.3s ease 0s;
+  position: relative;
 }
 
 .menu__link:hover {
   color: #2196f3;
+}
+
+.menu__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+  transition: width 0.3s ease 0s;
+}
+
+.menu__link:hover::after {
+  width: 100%;
 }
 
 .sub-menu {
@@ -99,10 +127,26 @@ body {
 
 .sub-menu__link {
   font-size: 16px;
+  position: relative;
 }
 
 .sub-menu__link:hover {
   color: #2196f3;
+}
+
+.sub-menu__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #2196f3;
+  transition: width 0.3s ease 0s;
+}
+
+.sub-menu__link:hover::after {
+  width: 100%;
 }
 
 .title {
@@ -126,13 +170,14 @@ body {
 }
 
 .examples__transition-duration {
+  margin-bottom: 50px;
 }
 
 /* transition-duration */
 
-.transition-duration {
+/* .transition-duration {
   background-color: rgb(126, 126, 126);
-}
+} */
 
 .transition-duration__list {
   padding: 50px 0px;
@@ -174,6 +219,117 @@ body {
   transition-duration: 1500ms;
 }
 
+/* transition-property */
+
+.examples__transition-property {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.transition-property__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #7a956b;
+  text-align: center;
+  border: 1px solid tomato;
+  color: red;
+  transition-duration: 0.5s, 1s;
+  transition-property: width, height;
+}
+
+.transition-property__item:hover {
+  width: 900px;
+  height: 50px;
+  color: white;
+  background-color: #77608d;
+}
+
+/* transition-delay */
+
+.examples__transition-delay {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.transition-delay {
+}
+
+.transition-delay__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #7a956b;
+  text-align: center;
+  border: 1px solid tomato;
+  color: red;
+  transition-duration: 0.5s, 1s;
+  transition-property: width, height;
+  transition-delay: 0.5s, 1s;
+}
+
+.transition-delay__item:hover {
+  width: 900px;
+  height: 50px;
+  color: white;
+  background-color: #77608d;
+}
+
+/* transition-timing-function */
+
+.examples__transition-timing-function {
+  margin-bottom: 50px;
+  padding: 15px;
+}
+
+.transition-timing-function__item {
+  width: 50px;
+  height: 50px;
+  border-radius: 15%;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  transform: translatex(300px);
+  transition-property: transform;
+  transition-duration: 2000ms;
+}
+
+.transition-timing-function__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.examples__transition-timing-function:hover .transition-timing-function__item {
+  transform: translatex(900px);
+}
+
+.transition-timing-function__item--red {
+  background-color: red;
+  transition-timing-function: linear;
+}
+
+.transition-timing-function__item--blue {
+  background-color: blue;
+  transition-timing-function: ease;
+}
+
+.transition-timing-function__item--green {
+  background-color: green;
+  transition-timing-function: ease-in;
+}
+
+.transition-timing-function__item--yellow {
+  background-color: yellow;
+  transition-timing-function: ease-out;
+}
+
+.transition-timing-function__item--violet {
+  background-color: violet;
+  transition-timing-function: ease-in-out;
+}
+
+.transition-timing-function__item--tomato {
+  background-color: tomato;
+  transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+}
 /* footer */
 
 .page-footer {

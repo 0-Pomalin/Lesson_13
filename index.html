@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson_13</title>
-    link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -24,24 +24,21 @@
                 <a class="menu__link" href="">CSS - переходи</a>
                 <ul class="sub-menu">
                   <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#duration">transition-duration</a>
+                    <a class="sub-menu__link" href="#duration">transition-duration: </a>
                   </li>
                   <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#relative">: relative</a>
+                    <a class="sub-menu__link" href="#property">transition-property: </a>
                   </li>
                   <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#absolute">: absolute</a>
+                    <a class="sub-menu__link" href="#delay">transition-delay: </a>
                   </li>
                   <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#fixed">: fixed</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#sticky">: sticky</a>
+                    <a class="sub-menu__link" href="#timing-function">transition-timing-function: </a>
                   </li>
                 </ul>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#battlefield">Поле бою</a>
+                <a class="menu__link" href="">CSS - анімація</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="">Контакти</a>
@@ -54,13 +51,34 @@
         <h1 class="examples__main-title title">CSS властивість transition & animation</h1>
         <section class="examples">
           <div class="examples__container">
-            <div class="examples__transition-duration transition-duration">
+            <div id="duration" class="examples__transition-duration transition-duration">
               <h2 class="transition-duration__title title">Властивість transition-duration</h2>
               <ul class="transition-duration__list transition-duration-list">
                 <li class="transition-duration-list__item transition-duration-list__item--orange">500ms</li>
                 <li class="transition-duration-list__item transition-duration-list__item--blue">1000ms</li>
                 <li class="transition-duration-list__item transition-duration-list__item--green">1500ms</li>
               </ul>
+            </div>
+            <div id="property" class="examples__transition-property transition-property">
+              <h2 class="transition-property__title title">Властивість transition-property</h2>
+              <div class="transition-property__item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium eligendi laboriosam ipsam
+              </div>
+            </div>
+            <div id="delay" class="examples__transition-delay transition-delay">
+              <h2 class="transition-delay__title title">Властивість transition-delay</h2>
+              <div class="transition-delay__item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium eligendi laboriosam ipsam
+              </div>
+            </div>
+            <div id="timing-function" class="examples__transition-timing-function transition-timing-function">
+              <h2 class="transition-timing-function__title title">Властивість transition-timing-function</h2>
+              <div class="transition-timing-function__item transition-timing-function__item--red"></div>
+              <div class="transition-timing-function__item transition-timing-function__item--blue"></div>
+              <div class="transition-timing-function__item transition-timing-function__item--green"></div>
+              <div class="transition-timing-function__item transition-timing-function__item--yellow"></div>
+              <div class="transition-timing-function__item transition-timing-function__item--violet"></div>
+              <div class="transition-timing-function__item transition-timing-function__item--tomato"></div>
             </div>
           </div>
         </section>
