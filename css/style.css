@@ -156,13 +156,46 @@ body {
   text-align: center;
 }
 
-.examples__main-title {
+.main-title {
   font-weight: 900;
   font-size: 38px;
   color: tomato;
+
+  animation: title 3s ease;
 }
 
-/* section examples*/
+.examples__sub-title,
+.examples-animation__sub-title {
+  transform: translate(0, 50%);
+  opacity: 0;
+  animation: sub-title 1s ease 2s forwards;
+}
+
+@keyframes sub-title {
+  0% {
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.examples__title,
+.examples-animation__title,
+.newton-cradle__title {
+  animation: title 3s ease 0.5s;
+}
+
+@keyframes title {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* section CSS - переходи*/
 
 .examples {
   /* padding: 20px; */
@@ -330,6 +363,332 @@ body {
   background-color: tomato;
   transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
 }
+
+/* section CSS - анімація*/
+
+.examples-animation__container {
+  outline: 1px solid tomato;
+}
+
+[class*='animation-'] {
+  text-align: center;
+  margin-bottom: 50px;
+  outline: 1px solid tomato;
+}
+
+/* animation-name */
+
+.animation-name {
+}
+
+.animation-name__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: rotate-square-name;
+}
+
+@keyframes rotate-square-name {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+/* animation-duration */
+
+.animation-duration {
+}
+
+.animation-duration__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: rotate-square-duration;
+  animation-duration: 0.5s;
+}
+
+@keyframes rotate-square-duration {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+/* animation-timing-function */
+
+.animation-timing-function {
+}
+
+.animation-timing-function__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: rotate-square-timing-function;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes rotate-square-timing-function {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+/* animation-iteration-count */
+
+.animation-iteration-count {
+}
+
+.animation-iteration-count__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: rotate-square-iteration-count;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  /* animation-iteration-count: 5; */
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-square-iteration-count {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* animation-direction */
+
+.animation-direction__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: rotate-square-direction;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  /* animation-iteration-count: 5; */
+  animation-iteration-count: infinite;
+  /* animation-direction: normal; */
+  /* animation-direction: reverse; */
+  /* animation-direction: alternate; */
+  animation-direction: alternate-reverse;
+}
+
+@keyframes rotate-square-direction {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+/* animation-play-state */
+
+.animation-play-state__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: square-play-state;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+
+  animation-play-state: running;
+}
+
+.animation-play-state__item:hover {
+  animation-play-state: paused;
+}
+
+@keyframes square-play-state {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(200px, 0);
+  }
+}
+
+/* animation-delay */
+
+.animation-delay__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: square-delay;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-play-state: running;
+
+  animation-delay: 5s;
+}
+
+@keyframes square-delay {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(200px, 0);
+  }
+}
+
+/* animation-fill-mode */
+
+.animation-fill-mode__item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #77608d;
+
+  animation-name: square-fill;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 1s;
+
+  animation-fill-mode: forwards;
+}
+
+@keyframes square-fill {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(200px, 0);
+  }
+}
+
+/* --------------- newton-cradle --------------- */
+
+.example-newton-cradle {
+  margin-bottom: 50px;
+}
+
+.example-newton-cradle__container {
+  background-color: #fff;
+}
+
+.newton-cradle {
+  position: relative;
+  width: 280px;
+  height: 170px;
+  margin: 20px auto;
+  padding: 0 0 0 5px;
+  border-top: 10px solid silver;
+  border-left: 10px solid silver;
+  border-right: 10px solid silver;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px 3px 10px -3px rgb(0 0 0 / 100%);
+}
+
+.newton-cradle::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -70px;
+
+  width: 400px;
+  height: 20px;
+  border-radius: 25px 25px 0 0;
+  background: radial-gradient(silver, lightgray, silver);
+  border: 2px solid silver;
+  box-shadow: 1px 5px 10px 3px rgb(0 0 0 / 10%);
+}
+
+.newton-cradle__ball {
+  z-index: 0;
+  float: left;
+  position: relative;
+  margin-top: 100px;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 65% 15%, white 1px, lightgray 3%, gray 60%, lightgray 100%);
+  box-shadow: 1px 5px 10px 3px rgb(0 0 0 / 10%);
+  border-radius: 50%;
+  transform-origin: 50% -100px;
+}
+
+.newton-cradle__ball::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: white;
+  filter: blur(5px);
+}
+
+.newton-cradle__ball::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: 24px;
+  height: 100px;
+  width: 1px;
+  background: black;
+}
+
+.newton-cradle__ball:nth-child(1) {
+  animation: ball1 0.5s infinite alternate 0.5s ease-out;
+}
+
+.newton-cradle__ball:nth-child(5) {
+  animation: ball5 0.5s infinite alternate ease-out;
+}
+
+@keyframes ball1 {
+  0%,
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes ball5 {
+  0%,
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
 /* footer */
 
 .page-footer {

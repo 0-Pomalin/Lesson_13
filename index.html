@@ -39,17 +39,45 @@
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="">CSS - анімація</a>
+                <ul class="sub-menu">
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-name">animation-name: </a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-duration">animation-duration: </a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-timing-function">animation-timing-function: </a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-iteration-count">animation-iteration-count: </a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-direction">animation-direction: </a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-play-state">animation-play-state: </a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-delay">animation-delay: </a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a class="sub-menu__link" href="#animation-fill-mode">animation-fill-mode: </a>
+                  </li>
+                </ul>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="">Контакти</a>
+                <a class="menu__link" href="#newton-cradle">Колиска Ньютона</a>
               </li>
             </ul>
           </nav>
         </div>
       </header>
       <main>
-        <h1 class="examples__main-title title">CSS властивість transition & animation</h1>
+        <h1 class="main-title title">CSS властивість transition & animation</h1>
         <section class="examples">
+          <h2 class="examples__title title">CSS-переходи</h2>
+          <h3 class="examples__sub-title title">transition: [property] [duration] [timing-function] [delay]</h3>
           <div class="examples__container">
             <div id="duration" class="examples__transition-duration transition-duration">
               <h2 class="transition-duration__title title">Властивість transition-duration</h2>
@@ -79,6 +107,71 @@
               <div class="transition-timing-function__item transition-timing-function__item--yellow"></div>
               <div class="transition-timing-function__item transition-timing-function__item--violet"></div>
               <div class="transition-timing-function__item transition-timing-function__item--tomato"></div>
+            </div>
+          </div>
+        </section>
+        <section class="examples-animation">
+          <h2 class="examples-animation__title title">CSS-анімація</h2>
+          <h3 class="examples-animation__sub-title title">
+            animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode]
+            [play-state]
+          </h3>
+          <div class="examples-animation__container">
+            <div id="animation-name" class="examples-animation__animation-name animation-name">
+              <h2 class="animation-name__title title">Властивість animation-name</h2>
+              <div class="animation-name__item"></div>
+            </div>
+
+            <div id="animation-duration" class="examples-animation__animation-duration animation-duration">
+              <h2 class="animation-duration__title title">Властивість animation-duration</h2>
+              <div class="animation-duration__item"></div>
+            </div>
+
+            <div
+              id="animation-timing-function"
+              class="examples-animation__animation-timing-function animation-timing-function">
+              <h2 class="animation-timing-function__title title">Властивість animation-timing-function</h2>
+              <div class="animation-timing-function__item"></div>
+            </div>
+
+            <div
+              id="animation-iteration-count"
+              class="examples-animation__animation-iteration-count animation-iteration-count">
+              <h2 class="animation-iteration-count__title title">Властивість animation-iteration-count</h2>
+              <div class="animation-iteration-count__item"></div>
+            </div>
+
+            <div id="animation-direction" class="examples-animation-direction animation-direction">
+              <h2 class="animation-direction__title title">Властивість animation-direction</h2>
+              <div class="animation-direction__item"></div>
+            </div>
+
+            <div id="animation-play-state" class="examples-animation-play-state animation-play-state">
+              <h2 class="animation-play-state__title title">Властивість animation-play-state</h2>
+              <div class="animation-play-state__item"></div>
+            </div>
+
+            <div id="animation-delay" class="examples-animation-delay animation-delay">
+              <h2 class="animation-delay__title title">Властивість animation-delay</h2>
+              <div class="animation-delay__item"></div>
+            </div>
+
+            <div id="animation-fill-mode" class="examples-animation-fill-mode animation-fill-mode">
+              <h2 class="animation-fill-mode__title title">Властивість animation-fill-mode</h2>
+              <div class="animation-fill-mode__item"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="newton-cradle" class="example-newton-cradle">
+          <h2 class="example-newton-cradle__title title">Колиска Ньютона</h2>
+          <div class="example-newton-cradle__container">
+            <div class="newton-cradle">
+              <div class="newton-cradle__ball"></div>
+              <div class="newton-cradle__ball"></div>
+              <div class="newton-cradle__ball"></div>
+              <div class="newton-cradle__ball"></div>
+              <div class="newton-cradle__ball"></div>
             </div>
           </div>
         </section>
